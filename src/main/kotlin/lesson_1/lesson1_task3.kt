@@ -7,11 +7,11 @@ fun main () {
     var minute: String = "07"
 
     println(year)
-//    println(hour)
-//    println(minute)
+    println(hour)
+    println(minute)
 
     hour = "10"
     minute = "55"
 
-    println(hour + ":" + minute)
+    println("$hour:$minute")
 }
