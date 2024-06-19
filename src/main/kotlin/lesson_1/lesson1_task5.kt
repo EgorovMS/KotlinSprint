@@ -2,20 +2,30 @@ package org.example.lesson_1
 
 fun main() {
 
-    val seconds: Float = 6480f
+    val timeInSpaceInSeconds: Int = 6480
+    val numberOfSecondsInMinutes: Int = 60
 
-//    println(seconds / 60)
-//    println(seconds % 60)
+    val secondsInSpace = timeInSpaceInSeconds % numberOfSecondsInMinutes
+    val timeInSpaceInMinutes = timeInSpaceInSeconds / numberOfSecondsInMinutes
 
+//    println(secondsInSpace)
+//    println(timeInSpaceInMinutes)
+
+    val numberOfMinutesInHours: Int = 60
+    val minutesInSpace = timeInSpaceInMinutes % numberOfMinutesInHours
+    val timeInSpaceInHours = timeInSpaceInMinutes / numberOfMinutesInHours
+
+//    println(minutesInSpace)
+//    println(timeInSpaceInHours)
+
+    println(String. format("%02d:%d:%02d", 1, 48, 0))
+
+
+
+
+//    secondsInSpace
     val minute: Float = 108f
 
-//    println(minute / 60)
-//    println(minute % 60)
 
-    val hour: Char = '1'
-
-//    println(hour)
-
-    val flightTime: String = "01:48:00"
-    println(flightTime)
+//    println(flightTime)
 }
