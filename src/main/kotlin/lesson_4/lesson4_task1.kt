@@ -9,7 +9,7 @@ fun main() {
     println("Доступность столиков на сегодня: $tableAvailabilityToday")
 
     val tableAvailabilityForTomorrow = reservationForTomorrow < NUMBER_OF_TABLES
-        println("Доступность столиков на завтра: $tableAvailabilityForTomorrow")
+    println("Доступность столиков на завтра: $tableAvailabilityForTomorrow")
 }
 
 const val NUMBER_OF_TABLES = 13
