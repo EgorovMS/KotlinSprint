@@ -3,7 +3,7 @@ package org.example.lesson_5
 fun main() {
 
     val login = "Zaphod"
-    val password ="PanGalactic"
+    val password = "PanGalactic"
 
     println("Введите логин")
 
