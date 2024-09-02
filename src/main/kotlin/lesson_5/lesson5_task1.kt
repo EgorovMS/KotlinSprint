@@ -1,13 +1,16 @@
 package org.example.lesson_5
 
+import kotlin.random.Random
+
 fun main() {
 
-    println("Для входа решите пример 2 + 2 = ?")
+    val a = Random.nextInt(0, 100)
+    val b = Random.nextInt(0, 100)
+    println("Для входа решите пример $a +  $b = ?")
 
-    val mathExample = readLine()!!.toInt()
-
+    val mathExample = readLine()?.toIntOrNull()
     val consolNumber = when(mathExample) {
-        4 -> "Добро пожаловать!"
+        a + b -> "Добро пожаловать!"
         else -> "Доступ запрещен"
     }
 
