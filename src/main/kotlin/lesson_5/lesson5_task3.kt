@@ -7,19 +7,19 @@ fun main() {
 
     println("Угадайте первое число")
 
-    val userInputOne = readLine()?.toIntOrNull()
+    val userInputOne = readln()?.toIntOrNull()
 
     println("Угадайте второе число")
 
-    val userInputTwo = readLine()?.toIntOrNull()
+    val userInputTwo = readln()?.toIntOrNull()
 
-    if (userInputOne == numTwo && userInputTwo == numOne) {
+    if ((userInputOne == numOne && userInputTwo == numTwo)
+        || (userInputOne == numTwo && userInputTwo == numOne)) {
         println("Поздравляем! Вы выиграли главный приз!")
-    } else if (userInputOne != numTwo && userInputTwo == numOne) {
+    } else if ((userInputOne == numOne || userInputTwo == numTwo)
+        || (userInputOne == numTwo || userInputTwo == numOne)) {
         println("Вы выиграли утешительный приз!")
-    } else if (userInputOne == numTwo && userInputTwo != numOne) {
-        println("Вы выиграли утешительный приз!")
-    } else if (userInputOne != numTwo && userInputTwo != numOne) {
+    } else  {
         println("Неудача!")
     }
 
