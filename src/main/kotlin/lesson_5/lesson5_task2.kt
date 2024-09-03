@@ -2,14 +2,18 @@ package org.example.lesson_5
 
 fun main() {
 
-    val userYear = readLine()!!.toInt()
+    println("Введите ваш год рождения")
 
-    if(userYear <= YEAR_OF_MAJORITY) {
+    val consoleYear = readLine()?.toIntOrNull()
+
+    val currentYear = 2024
+    val userAge: Int = (currentYear - consoleYear)
+
+    if (userAge >= AGE_OF_MAJORITY) {
         println("Показать экран со скрытым контентом")
-    }
-    if (userYear > YEAR_OF_MAJORITY) {
-        println("Вернуть на главный экран")
-    }
+    } else {
+            println("Вернуть на главный экран")
+        }
 }
 
-const val YEAR_OF_MAJORITY = 2006
+const val AGE_OF_MAJORITY = 18
