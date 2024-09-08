@@ -4,7 +4,7 @@ fun main() {
 
     println("Введите ваш год рождения")
 
-    val consoleYear = readLine()?.toIntOrNull()
+    val consoleYear = readln().toInt()
 
     val currentYear = 2024
     val userAge: Int = (currentYear - consoleYear)
