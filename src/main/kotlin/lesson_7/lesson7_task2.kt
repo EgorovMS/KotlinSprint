@@ -1,20 +1,18 @@
 package org.example.lesson_7
 
 fun main() {
-    var smsCode = (1000..9999).random()
-    println("Ваш код авторизации: $smsCode")
 
     var enteringTheCode: Int
+    var smsCode: Int
 
-    for (i in 9999 downTo 1000) {
+    do {
+        smsCode = (1000..9999).random()
+        println("Ваш код авторизации: $smsCode")
         println("Введите код авторизации")
         enteringTheCode = readln().toInt()
         if (enteringTheCode == smsCode) {
             println("Добро пожаловать!")
             break
         }
-        if (enteringTheCode != smsCode) {
-            println("Ваш код авторизации: $smsCode")
-        }
-    }
+    } while (enteringTheCode != smsCode)
 }
