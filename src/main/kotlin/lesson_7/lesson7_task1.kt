@@ -2,12 +2,19 @@ package org.example.lesson_7
 
 fun main() {
 
-    val number1 = (1..9).random()
-    val number2 = (1..9).random()
-    val number3 = (1..9).random()
-    val letter1 = ('a'..'z').random()
-    val letter2 = ('a'..'z').random()
-    val letter3 = ('a'..'z').random()
+    val number = 1..9
+    val letter = 'a'..'z'
+    val passwordLenght = 6
 
-    println("Ваш пароль: $number1$letter1$number2$letter2$number3$letter3")
+    val password = StringBuilder()
+
+    for (i in 0 until passwordLenght) {
+        if (i % 2 == 0) {
+            password.append(letter.random())
+        } else {
+            password.append(number.random())
+        }
+    }
+
+    println("Ваш пароль: $password")
 }
