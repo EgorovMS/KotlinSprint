@@ -7,8 +7,7 @@ fun main() {
     var userInput = readln()
         if (userInput in arrayOfIngredients) {
             println("Ингредиент $userInput в рецепте есть")
-        }
-        if (userInput !in arrayOfIngredients) {
+        } else {
             println("Такого ингредиента в рецепте нет")
         }
     }
