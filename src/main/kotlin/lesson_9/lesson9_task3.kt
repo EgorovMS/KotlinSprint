@@ -1,7 +1,5 @@
 package org.example.lesson_9
 
-import kotlin.time.times
-
 fun main() {
 
     val oneServing: MutableList<Int> = mutableListOf(2, 50, 15)
@@ -9,10 +7,7 @@ fun main() {
     println("Введите количество порций: ")
 
     val numberOfServings = readln().toInt()
+    val manyServing = oneServing.map { it * numberOfServings }
 
-    val eggs = oneServing[0] * numberOfServings
-    val milk = oneServing[1] * numberOfServings
-    val butter = oneServing[2] * numberOfServings
-
-    println("На $numberOfServings порций вам понадобится: Яиц - $eggs, молока - $milk, сливочного масла - $butter")
+    println("На $numberOfServings порций вам понадобится: Яиц - ${manyServing[0]}, молока - ${manyServing[1]}, сливочного масла - ${manyServing[2]}")
 }
