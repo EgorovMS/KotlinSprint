@@ -6,6 +6,7 @@ fun main() {
     when {
         throwHuman > throwMachine -> println("Победило человечество")
         throwHuman < throwMachine -> println("Победила машина")
+        else -> println("Ничья")
     }
 }
 
