@@ -9,10 +9,6 @@ fun main() {
 
     val indexOfReplacingIngredient = arrayOfIngredients.indexOf(replacingAnIngredient)
 
-
-
-
-
     if (indexOfReplacingIngredient != -1) {
         println("Введите новый ингредиент")
         val newIngredient: String = readln()
@@ -21,13 +17,5 @@ fun main() {
     } else  {
         println("Ингредиент не найден в списке.")
     }
-    if (replacingAnIngredient in arrayOfIngredients) {
-        println("Введите новый ингредиент")
-        val newIngredient: String = readln()
-        val index = arrayOfIngredients.indexOf(replacingAnIngredient)
-        arrayOfIngredients[index] = newIngredient
-        println("Готово! Вы сохранили следующий список: ${arrayOfIngredients.contentToString()}")
-    } else  {
-        println("Ингредиент не найден в списке.")
-    }
+
 }
