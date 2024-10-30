@@ -10,10 +10,12 @@ fun main() {
 
     val questionToUser: String = readln()
 
-    if (questionToUser == "да") {
+    if (questionToUser.equals(YES, true )) {
         println("Какой ингредиент вы хотите добавить?")
         val newIngredients: String = readln()
         ingredients.add(newIngredients)
         println("Теперь в рецепте есть следующие ингредиенты: $ingredients")
     }
 }
+
+const val YES = "да"
